@@ -11,16 +11,22 @@ import classnames from "classnames";
 import { CiShoppingBasket } from "react-icons/ci";
 import { GiAvocado } from "react-icons/gi";
 import Button from "@components/button";
+import { useCart } from "@utils/store";
+import MiniCartItem from "./cart-item";
 
-interface IProps {
-  quantity: number;
-}
+const MiniCart = () => {
+  const items = useCart((state) => state.items);
+  const quantity = useCart((state) => state.quantity);
 
-const CartIcon = ({ quantity = 0 }: IProps) => {
+  console.log(items);
+
   return (
     <Root>
       <Trigger asChild>
-        <button className="inline-flex items-center p-2" title="Shopping Cart">
+        <button
+          className="inline-flex items-center p-2 text-slate-600 hover:text-sky-800"
+          title="Shopping Cart"
+        >
           <CiShoppingBasket />
           <span className="ml-1 font-sans text-base">
             {quantity > 0 && quantity}
@@ -29,28 +35,36 @@ const CartIcon = ({ quantity = 0 }: IProps) => {
       </Trigger>
       <Portal>
         <Content
-          align="center"
+          align="end"
           sideOffset={2}
           className={classnames(
             "radix-side-top:animate-slide-up radix-side-bottom:animate-slide-down",
-            "shadow-slate-700/6 z-50 w-48 rounded-lg border border-slate-100 bg-white p-4 shadow-lg md:w-56"
+            "shadow-slate-700/6 z-50 w-80 rounded-lg border border-slate-100 bg-white p-4 shadow-lg"
           )}
         >
           <h3 className="font-header text-sm uppercase text-slate-700">
             Shopping Cart
           </h3>
 
-          <div className="mt-4 space-y-2">
-            <div className="min-h-[200px] py-8">
-              <div className="relative flex flex-col items-center">
-                <div className="relative z-10 flex h-[70px] w-[70px] skew-x-12 items-center justify-center rounded-[80px] bg-sky-200 text-2xl text-sky-600">
-                  <GiAvocado />
+          <div className=" mt-4 space-y-4">
+            <div className="-mx-4 max-h-[60vh] min-h-[200px] overflow-auto bg-slate-50 p-4">
+              {items.length ? (
+                <div className="flex flex-col">
+                  {items.map((item) => (
+                    <MiniCartItem key={item.id} item={item} />
+                  ))}
                 </div>
-                <div className="relative z-10 font-header uppercase">
-                  Your cart is empty
+              ) : (
+                <div className="relative flex flex-col items-center">
+                  <div className="relative z-10 flex h-[70px] w-[70px] skew-x-12 items-center justify-center rounded-[80px] bg-sky-200 text-2xl text-sky-600">
+                    <GiAvocado />
+                  </div>
+                  <div className="relative z-10 font-header uppercase">
+                    Your cart is empty
+                  </div>
+                  <div className="absolute -top-4 h-[130px] w-[120px] -skew-x-6 rounded-[120px] bg-sky-100"></div>
                 </div>
-                <div className="absolute -top-4 h-[130px] w-[120px] -skew-x-6 rounded-[120px] bg-sky-100"></div>
-              </div>
+              )}
             </div>
             <Button className="w-full">View Cart</Button>
           </div>
@@ -70,4 +84,4 @@ const CartIcon = ({ quantity = 0 }: IProps) => {
   );
 };
 
-export default CartIcon;
+export default MiniCart;

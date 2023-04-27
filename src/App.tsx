@@ -3,7 +3,7 @@ import { Contact, Home, Shop, SignIn } from "@routes";
 import { useAuthUser } from "@utils/store";
 import { signOutUser, useAuthUpdate, useFetchProducts } from "@utils/firebase";
 import { CiAvocado, CiLogout, CiUser } from "react-icons/ci";
-import CartIcon from "@components/cart-icon";
+import MiniCart from "@components/mini-cart";
 
 const Layout = () => {
   const user = useAuthUser((state) => state.user);
@@ -43,7 +43,7 @@ const Layout = () => {
           <nav className="flex justify-end">
             <ul className="flex font-header text-2xl uppercase">
               <li>
-                <CartIcon quantity={1} />
+                <MiniCart />
               </li>
               <li>
                 <Link
