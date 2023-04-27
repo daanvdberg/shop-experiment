@@ -1,0 +1,44 @@
+@tailwind base;
+
+@layer base {
+  html {
+    font-weight: 300;
+    @apply font-sans;
+    @apply bg-slate-100;
+    @apply text-slate-800;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+a {
+  display: inline-flex;
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  @apply text-sky-700;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+div#root {
+  height: 100%;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
