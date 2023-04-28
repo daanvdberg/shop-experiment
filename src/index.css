@@ -14,9 +14,8 @@
 
 a {
   display: inline-flex;
-  font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
+  @apply text-slate-600;
 }
 
 a:hover {

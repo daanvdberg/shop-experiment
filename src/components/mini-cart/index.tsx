@@ -11,17 +11,37 @@ import classnames from "classnames";
 import { CiShoppingBasket } from "react-icons/ci";
 import { GiAvocado } from "react-icons/gi";
 import Button from "@components/button";
-import { useCart } from "@utils/store";
+import { useAuthUser, useCart } from "@utils/store";
 import MiniCartItem from "./cart-item";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const MiniCart = () => {
+  const user = useAuthUser((state) => state.user);
+  const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
   const items = useCart((state) => state.items);
   const quantity = useCart((state) => state.quantity);
 
-  console.log(items);
+  const handleViewCart = () => {
+    setOpen(false);
+    navigate("/cart");
+  };
+
+  if (!user) {
+    return (
+      <button
+        className="inline-flex items-center p-2 text-slate-600 hover:text-sky-800"
+        title="Shopping Cart"
+        onClick={() => navigate("/sign-in")}
+      >
+        <CiShoppingBasket />
+      </button>
+    );
+  }
 
   return (
-    <Root>
+    <Root open={open} onOpenChange={(open) => setOpen(open)}>
       <Trigger asChild>
         <button
           className="inline-flex items-center p-2 text-slate-600 hover:text-sky-800"
@@ -55,8 +75,8 @@ const MiniCart = () => {
                   ))}
                 </div>
               ) : (
-                <div className="relative flex flex-col items-center">
-                  <div className="relative z-10 flex h-[70px] w-[70px] skew-x-12 items-center justify-center rounded-[80px] bg-sky-200 text-2xl text-sky-600">
+                <div className="relative mt-6 flex flex-col items-center">
+                  <div className="relative z-10 flex h-[70px] w-[70px] skew-x-12 items-center justify-center rounded-[80px] bg-sky-200 text-2xl text-lime-700">
                     <GiAvocado />
                   </div>
                   <div className="relative z-10 font-header uppercase">
@@ -66,7 +86,9 @@ const MiniCart = () => {
                 </div>
               )}
             </div>
-            <Button className="w-full">View Cart</Button>
+            <Button onClick={handleViewCart} className="w-full">
+              View Cart
+            </Button>
           </div>
 
           <Close

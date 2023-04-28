@@ -7,7 +7,7 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
-      "@routes": ["src/routes/index.ts"],
+      "@routes": ["src/routes/index.tsx"],
       "@utils": ["src/utils/index.ts"],
       "@utils/*": ["src/utils/*"]
     },

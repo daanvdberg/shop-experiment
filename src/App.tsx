@@ -1,5 +1,13 @@
 import { Routes, Route, Outlet, Link } from "react-router-dom";
-import { Contact, Home, Shop, SignIn } from "@routes";
+import {
+  Cart,
+  Contact,
+  Home,
+  Profile,
+  ProtectedRoute,
+  Shop,
+  SignIn,
+} from "@routes";
 import { useAuthUser } from "@utils/store";
 import { signOutUser, useAuthUpdate, useFetchProducts } from "@utils/firebase";
 import { CiAvocado, CiLogout, CiUser } from "react-icons/ci";
@@ -69,7 +77,7 @@ const Layout = () => {
           </nav>
         </div>
       </header>
-      <div className="flex-grow px-4 pb-16 pt-8">
+      <div className="flex-grow px-4 pb-16 pt-12">
         <div className="mx-auto max-w-[1024px]">
           <Outlet />
         </div>
@@ -95,6 +103,11 @@ const App = () => {
           <Route path="shop" element={<Shop />} />
           <Route path="contact" element={<Contact />} />
           <Route path="sign-in" element={<SignIn />} />
+          <Route
+            path="profile"
+            element={<ProtectedRoute element={<Profile />} />}
+          />
+          <Route path="cart" element={<ProtectedRoute element={<Cart />} />} />
         </Route>
       </Routes>
     </>

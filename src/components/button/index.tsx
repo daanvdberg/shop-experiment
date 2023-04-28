@@ -2,7 +2,7 @@ import classnames from "classnames";
 import { ButtonHTMLAttributes, PropsWithChildren, forwardRef } from "react";
 
 interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "google";
+  variant?: "primary" | "secondary" | "danger" | "google";
 }
 
 const Button = forwardRef<HTMLButtonElement, PropsWithChildren<IProps>>(
@@ -14,6 +14,11 @@ const Button = forwardRef<HTMLButtonElement, PropsWithChildren<IProps>>(
     if (variant === "secondary") {
       variantStyles =
         "bg-transparent border border-slate-700 hover:bg-slate-700 hover:text-white";
+    }
+
+    if (variant === "danger") {
+      variantStyles =
+        "bg-rose-600 border-rose-700 hover:bg-rose-700 text-white";
     }
 
     if (variant === "google") {
