@@ -7,7 +7,6 @@ import {
 import {
   Billing,
   Cart,
-  Contact,
   Home,
   NotFound,
   Orders,
