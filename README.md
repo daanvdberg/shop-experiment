@@ -11,3 +11,7 @@ Experimenting with building a simple webshop app using a React & Firebase.
 - Firebase (Authentication & Database)
 - Paypal SDK (Payment)
 - [DummyJSON](https://dummyjson.com) (dummy data)
+
+### Demo
+
+Preview of the app can be viewed [here](https://shop-experiment.vercel.app/).
