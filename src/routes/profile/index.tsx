@@ -1,12 +1,14 @@
 import Button from "@components/button";
-import { signOutUser } from "@utils/firebase";
+import { signOutUser } from "@utils/firebase/auth";
 import { useAuthUser } from "@utils/store";
-import { Link } from "react-router-dom";
+import { NavLink, Navigate, Outlet } from "react-router-dom";
 
 const Profile = () => {
   const user = useAuthUser((state) => state.user);
 
-  if (!user) return null;
+  if (!user) {
+    return <Navigate to="/sign-in" />;
+  }
 
   const abreviation = (user.displayName || "")
     .split(" ")
@@ -30,29 +32,46 @@ const Profile = () => {
           <hr className="my-6" />
           <ul>
             <li>
-              <Link
+              <NavLink
                 to="/profile"
-                className="py-2 text-xl font-medium text-sky-700"
+                className={({ isActive }) =>
+                  isActive
+                    ? "py-2 text-xl font-medium text-sky-700"
+                    : "py-2 text-xl"
+                }
+                end
               >
                 Personal Information
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/profile/billing" className="py-2 text-xl">
+              <NavLink
+                to="/profile/billing"
+                className={({ isActive }) =>
+                  isActive
+                    ? "py-2 text-xl font-medium text-sky-700"
+                    : "py-2 text-xl"
+                }
+              >
                 Billing & Payments
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="/profile/orders" className="py-2 text-xl">
+              <NavLink
+                to="/profile/orders"
+                className={({ isActive }) =>
+                  isActive
+                    ? "py-2 text-xl font-medium text-sky-700"
+                    : "py-2 text-xl"
+                }
+              >
                 Orders
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
         <div className="col-span-2">
-          <h2 className="text-medium font-header text-3xl">
-            Personal Information
-          </h2>
+          <Outlet />
         </div>
       </div>
     </div>

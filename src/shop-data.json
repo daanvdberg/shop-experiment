@@ -176,5 +176,272 @@
             "https://i.dummyjson.com/data/products/70/2.jpg",
             "https://i.dummyjson.com/data/products/70/thumbnail.jpg"
         ]
+    },
+    {
+        "id": 71,
+        "title": "Women Shoulder Bags",
+        "description": "LouisWill Women Shoulder Bags Long Clutches Cross Body Bags Phone Bags PU Leather Hand Bags Large Capacity Card Holders Zipper Coin Purses Fashion Crossbody Bags for Girls Ladies",
+        "price": 46,
+        "discountPercentage": 14.65,
+        "rating": 4.71,
+        "stock": 17,
+        "brand": "LouisWill",
+        "category": "womens-bags",
+        "thumbnail": "https://i.dummyjson.com/data/products/71/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/71/1.jpg",
+            "https://i.dummyjson.com/data/products/71/2.jpg",
+            "https://i.dummyjson.com/data/products/71/3.webp",
+            "https://i.dummyjson.com/data/products/71/thumbnail.jpg"
+        ]
+    },
+    {
+        "id": 72,
+        "title": "Handbag For Girls",
+        "description": "This fashion is designed to add a charming effect to your casual outfit. This Bag is made of synthetic leather.",
+        "price": 23,
+        "discountPercentage": 17.5,
+        "rating": 4.91,
+        "stock": 27,
+        "brand": "LouisWill",
+        "category": "womens-bags",
+        "thumbnail": "https://i.dummyjson.com/data/products/72/thumbnail.webp",
+        "images": [
+            "https://i.dummyjson.com/data/products/72/1.jpg",
+            "https://i.dummyjson.com/data/products/72/2.png",
+            "https://i.dummyjson.com/data/products/72/3.webp",
+            "https://i.dummyjson.com/data/products/72/4.jpg",
+            "https://i.dummyjson.com/data/products/72/thumbnail.webp"
+        ]
+    },
+    {
+        "id": 73,
+        "title": "Fancy hand clutch",
+        "description": "This fashion is designed to add a charming effect to your casual outfit. This Bag is made of synthetic leather.",
+        "price": 44,
+        "discountPercentage": 10.39,
+        "rating": 4.18,
+        "stock": 101,
+        "brand": "Bracelet",
+        "category": "womens-bags",
+        "thumbnail": "https://i.dummyjson.com/data/products/73/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/73/1.jpg",
+            "https://i.dummyjson.com/data/products/73/2.webp",
+            "https://i.dummyjson.com/data/products/73/3.jpg",
+            "https://i.dummyjson.com/data/products/73/thumbnail.jpg"
+        ]
+    },
+    {
+        "id": 74,
+        "title": "Leather Hand Bag",
+        "description": "It features an attractive design that makes it a must have accessory in your collection. We sell different kind of bags for boys, kids, women, girls and also for unisex.",
+        "price": 57,
+        "discountPercentage": 11.19,
+        "rating": 4.01,
+        "stock": 43,
+        "brand": "Copenhagen Luxe",
+        "category": "womens-bags",
+        "thumbnail": "https://i.dummyjson.com/data/products/74/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/74/1.jpg",
+            "https://i.dummyjson.com/data/products/74/2.jpg",
+            "https://i.dummyjson.com/data/products/74/3.jpg",
+            "https://i.dummyjson.com/data/products/74/4.jpg",
+            "https://i.dummyjson.com/data/products/74/thumbnail.jpg"
+        ]
+    },
+    {
+        "id": 75,
+        "title": "Seven Pocket Women Bag",
+        "description": "Seven Pocket Women Bag Handbags Lady Shoulder Crossbody Bag Female Purse Seven Pocket Bag",
+        "price": 68,
+        "discountPercentage": 14.87,
+        "rating": 4.93,
+        "stock": 13,
+        "brand": "Steal Frame",
+        "category": "womens-bags",
+        "thumbnail": "https://i.dummyjson.com/data/products/75/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/75/1.jpg",
+            "https://i.dummyjson.com/data/products/75/2.jpg",
+            "https://i.dummyjson.com/data/products/75/3.jpg",
+            "https://i.dummyjson.com/data/products/75/thumbnail.jpg"
+        ]
+    },
+    {
+        "id": 76,
+        "title": "Silver Ring Set Women",
+        "description": "Jewelry Type:RingsCertificate Type:NonePlating:Silver PlatedShapeattern:noneStyle:CLASSICReligious",
+        "price": 70,
+        "discountPercentage": 13.57,
+        "rating": 4.61,
+        "stock": 51,
+        "brand": "Darojay",
+        "category": "womens-jewellery",
+        "thumbnail": "https://i.dummyjson.com/data/products/76/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/76/1.jpg",
+            "https://i.dummyjson.com/data/products/76/2.jpg",
+            "https://i.dummyjson.com/data/products/76/thumbnail.jpg"
+        ]
+    },
+    {
+        "id": 77,
+        "title": "Rose Ring",
+        "description": "Brand: The Greetings Flower Colour: RedRing Colour: GoldenSize: Adjustable",
+        "price": 100,
+        "discountPercentage": 3.22,
+        "rating": 4.21,
+        "stock": 149,
+        "brand": "Copenhagen Luxe",
+        "category": "womens-jewellery",
+        "thumbnail": "https://i.dummyjson.com/data/products/77/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/77/1.jpg",
+            "https://i.dummyjson.com/data/products/77/2.jpg",
+            "https://i.dummyjson.com/data/products/77/3.jpg",
+            "https://i.dummyjson.com/data/products/77/thumbnail.jpg"
+        ]
+    },
+    {
+        "id": 78,
+        "title": "Rhinestone Korean Style Open Rings",
+        "description": "Fashion Jewellery 3Pcs Adjustable Pearl Rhinestone Korean Style Open Rings For Women",
+        "price": 30,
+        "discountPercentage": 8.02,
+        "rating": 4.69,
+        "stock": 9,
+        "brand": "Fashion Jewellery",
+        "category": "womens-jewellery",
+        "thumbnail": "https://i.dummyjson.com/data/products/78/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/78/thumbnail.jpg"
+        ]
+    },
+    {
+        "id": 79,
+        "title": "Elegant Female Pearl Earrings",
+        "description": "Elegant Female Pearl Earrings Set Zircon Pearl Earings Women Party Accessories 9 Pairs/Set",
+        "price": 30,
+        "discountPercentage": 12.8,
+        "rating": 4.74,
+        "stock": 16,
+        "brand": "Fashion Jewellery",
+        "category": "womens-jewellery",
+        "thumbnail": "https://i.dummyjson.com/data/products/79/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/79/1.jpg"
+        ]
+    },
+    {
+        "id": 80,
+        "title": "Chain Pin Tassel Earrings",
+        "description": "Pair Of Ear Cuff Butterfly Long Chain Pin Tassel Earrings - Silver ( Long Life Quality Product)",
+        "price": 45,
+        "discountPercentage": 17.75,
+        "rating": 4.59,
+        "stock": 9,
+        "brand": "Cuff Butterfly",
+        "category": "womens-jewellery",
+        "thumbnail": "https://i.dummyjson.com/data/products/80/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/80/1.jpg",
+            "https://i.dummyjson.com/data/products/80/2.jpg",
+            "https://i.dummyjson.com/data/products/80/3.png",
+            "https://i.dummyjson.com/data/products/80/4.jpg",
+            "https://i.dummyjson.com/data/products/80/thumbnail.jpg"
+        ]
+    },
+    {
+        "id": 81,
+        "title": "Round Silver Frame Sun Glasses",
+        "description": "A pair of sunglasses can protect your eyes from being hurt. For car driving, vacation travel, outdoor activities, social gatherings,",
+        "price": 19,
+        "discountPercentage": 10.1,
+        "rating": 4.94,
+        "stock": 78,
+        "brand": "Designer Sun Glasses",
+        "category": "sunglasses",
+        "thumbnail": "https://i.dummyjson.com/data/products/81/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/81/1.jpg",
+            "https://i.dummyjson.com/data/products/81/2.jpg",
+            "https://i.dummyjson.com/data/products/81/3.jpg",
+            "https://i.dummyjson.com/data/products/81/4.webp",
+            "https://i.dummyjson.com/data/products/81/thumbnail.jpg"
+        ]
+    },
+    {
+        "id": 82,
+        "title": "Kabir Singh Square Sunglass",
+        "description": "Orignal Metal Kabir Singh design 2020 Sunglasses Men Brand Designer Sun Glasses Kabir Singh Square Sunglass",
+        "price": 50,
+        "discountPercentage": 15.6,
+        "rating": 4.62,
+        "stock": 78,
+        "brand": "Designer Sun Glasses",
+        "category": "sunglasses",
+        "thumbnail": "https://i.dummyjson.com/data/products/82/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/82/1.jpg",
+            "https://i.dummyjson.com/data/products/82/2.webp",
+            "https://i.dummyjson.com/data/products/82/3.jpg",
+            "https://i.dummyjson.com/data/products/82/4.jpg",
+            "https://i.dummyjson.com/data/products/82/thumbnail.jpg"
+        ]
+    },
+    {
+        "id": 83,
+        "title": "Wiley X Night Vision Yellow Glasses",
+        "description": "Wiley X Night Vision Yellow Glasses for Riders - Night Vision Anti Fog Driving Glasses - Free Night Glass Cover - Shield Eyes From Dust and Virus- For Night Sport Matches",
+        "price": 30,
+        "discountPercentage": 6.33,
+        "rating": 4.97,
+        "stock": 115,
+        "brand": "mastar watch",
+        "category": "sunglasses",
+        "thumbnail": "https://i.dummyjson.com/data/products/83/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/83/1.jpg",
+            "https://i.dummyjson.com/data/products/83/2.jpg",
+            "https://i.dummyjson.com/data/products/83/3.jpg",
+            "https://i.dummyjson.com/data/products/83/4.jpg",
+            "https://i.dummyjson.com/data/products/83/thumbnail.jpg"
+        ]
+    },
+    {
+        "id": 84,
+        "title": "Square Sunglasses",
+        "description": "Fashion Oversized Square Sunglasses Retro Gradient Big Frame Sunglasses For Women One Piece Gafas Shade Mirror Clear Lens 17059",
+        "price": 28,
+        "discountPercentage": 13.89,
+        "rating": 4.64,
+        "stock": 64,
+        "brand": "mastar watch",
+        "category": "sunglasses",
+        "thumbnail": "https://i.dummyjson.com/data/products/84/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/84/1.jpg",
+            "https://i.dummyjson.com/data/products/84/2.jpg",
+            "https://i.dummyjson.com/data/products/84/thumbnail.jpg"
+        ]
+    },
+    {
+        "id": 85,
+        "title": "LouisWill Men Sunglasses",
+        "description": "LouisWill Men Sunglasses Polarized Sunglasses UV400 Sunglasses Day Night Dual Use Safety Driving Night Vision Eyewear AL-MG Frame Sun Glasses with Free Box for Drivers",
+        "price": 50,
+        "discountPercentage": 11.27,
+        "rating": 4.98,
+        "stock": 92,
+        "brand": "LouisWill",
+        "category": "sunglasses",
+        "thumbnail": "https://i.dummyjson.com/data/products/85/thumbnail.jpg",
+        "images": [
+            "https://i.dummyjson.com/data/products/85/1.jpg",
+            "https://i.dummyjson.com/data/products/85/2.jpg",
+            "https://i.dummyjson.com/data/products/85/thumbnail.jpg"
+        ]
     }
 ]

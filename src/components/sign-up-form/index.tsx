@@ -1,13 +1,11 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import {
-  createAuthUserWithEmailAndPassword,
-  updateUserDocumentDisplayName,
-} from "@utils/firebase";
 import { getMessageFromCode } from "@utils/firebase/errors";
 import { FirebaseError } from "firebase/app";
 import { updateProfile } from "firebase/auth";
 import FormInput from "@components/form-input";
 import Button from "@components/button";
+import { updateUserDocumentDisplayName } from "@utils/firebase/db";
+import { createAuthUserWithEmailAndPassword } from "@utils/firebase/auth";
 
 const defaultFormFields = {
   displayName: "",

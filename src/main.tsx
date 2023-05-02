@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
+import { Elements } from "@stripe/react-stripe-js";
+import { stripePromise } from "@utils/stripe";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <Elements stripe={stripePromise}>
       <App />
-    </BrowserRouter>
+    </Elements>
   </React.StrictMode>
 );

@@ -1,35 +1,19 @@
-import Directory from "@components/directory";
+import CategoryItem from "@components/category-item";
+import { useProducts } from "@utils/store";
 
 const Home = () => {
-  const categories = [
-    {
-      id: 1,
-      title: "hats",
-      imageUrl: "https://picsum.photos/id/338/500/300",
-    },
-    {
-      id: 2,
-      title: "jackets",
-      imageUrl: "https://picsum.photos/id/1005/500/300",
-    },
-    {
-      id: 3,
-      title: "sneakers",
-      imageUrl: "https://picsum.photos/id/1001/500/300",
-    },
-    {
-      id: 4,
-      title: "womens",
-      imageUrl: "https://picsum.photos/id/777/500/300",
-    },
-    {
-      id: 5,
-      title: "mens",
-      imageUrl: "https://picsum.photos/id/349/500/300",
-    },
-  ];
-
-  return <Directory categories={categories} />;
+  const categories = useProducts((state) => state.categories);
+  return (
+    <div className="grid w-full grid-cols-6 gap-6">
+      {categories.map((category, index) => (
+        <CategoryItem
+          key={category.id}
+          category={category}
+          className={index < 2 ? "col-span-3" : "col-span-2"}
+        />
+      ))}
+    </div>
+  );
 };
 
 export default Home;

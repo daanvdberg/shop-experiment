@@ -1,14 +1,24 @@
 import Button from "@components/button";
 import { formatPrice } from "@utils";
-import { Product, useCart } from "@utils/store";
-import { Link } from "react-router-dom";
+import { Product, useAuthUser, useCart } from "@utils/store";
+import { Link, useNavigate } from "react-router-dom";
 
 interface IProps {
   product: Product;
 }
 
 const ProductCard = ({ product }: IProps) => {
+  const user = useAuthUser((state) => state.user);
   const addCartItem = useCart((state) => state.addItem);
+  const navigate = useNavigate();
+
+  const handleAddToCart = () => {
+    if (!user) {
+      navigate("/sign-in");
+      return;
+    }
+    addCartItem(product);
+  };
 
   return (
     <div className="group overflow-hidden rounded-lg bg-slate-50 shadow-xl shadow-slate-200 transition-shadow duration-500 hover:shadow-slate-300">
@@ -17,8 +27,8 @@ const ProductCard = ({ product }: IProps) => {
         style={{ backgroundImage: `url(${product.thumbnail})` }}
       >
         <Button
-          onClick={() => addCartItem(product)}
-          className="px-10 py-6 font-bold opacity-0 hover:!opacity-100 group-hover:opacity-80 "
+          onClick={handleAddToCart}
+          className="px-10 py-6 font-bold opacity-0 hover:!opacity-100 group-focus-within:opacity-80 group-hover:opacity-80"
         >
           Add to Cart
         </Button>

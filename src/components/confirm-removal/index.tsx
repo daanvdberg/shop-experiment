@@ -26,13 +26,13 @@ const ConfirmRemoval = ({
           {title}
         </AlertDialog.Title>
         {description ? (
-          <AlertDialog.Description className="mb-8">
+          <AlertDialog.Description className="-mt-4 mb-8">
             {description}
           </AlertDialog.Description>
         ) : null}
         <div className="flex justify-end gap-[25px]">
           <AlertDialog.Cancel asChild>
-            <Button>Cancel</Button>
+            <Button variant="secondary">Cancel</Button>
           </AlertDialog.Cancel>
           <AlertDialog.Action asChild>
             <Button variant="danger" onClick={() => onConfirm()}>

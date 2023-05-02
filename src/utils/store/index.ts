@@ -23,12 +23,18 @@ export const useAuthUser = create<AuthStoreState>()(
 /**
  * Store state for Catalog
  */
-export type Category =
+export type CategoryKey =
   | "mens-watches"
   | "womens-watches"
   | "womens-bags"
   | "womens-jewellery"
   | "sunglasses";
+
+export interface Category {
+  id: CategoryKey;
+  title: string;
+  thumbnail: string;
+}
 
 export interface Product {
   id: number;
@@ -47,6 +53,7 @@ export interface Product {
 interface ProductStoreState {
   categories: Category[];
   products: Product[];
+  setCategories: (categories: Category[]) => void;
   setProducts: (products: Product[]) => void;
 }
 
@@ -54,6 +61,7 @@ export const useProducts = create<ProductStoreState>()(
   devtools((set) => ({
     categories: [],
     products: [],
+    setCategories: (categories) => set({ categories }),
     setProducts: (products) => set({ products }),
   }))
 );

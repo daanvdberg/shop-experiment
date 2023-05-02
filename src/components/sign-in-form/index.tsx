@@ -2,7 +2,7 @@ import { ChangeEvent, FormEvent, MouseEvent, useState } from "react";
 import {
   signInAuthUserWithEmailAndPassword,
   signInWithGooglePopup,
-} from "@utils/firebase";
+} from "@utils/firebase/auth";
 import { FirebaseError } from "firebase/app";
 import { getMessageFromCode } from "@utils/firebase/errors";
 import FormInput from "@components/form-input";
