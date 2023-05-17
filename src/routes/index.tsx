@@ -1,23 +1,40 @@
-import Home from "./home";
-import Shop from "./shop";
-import Contact from "./contact";
-import SignIn from "./sign-in";
-import Profile from "./profile";
-import PersonalInformation from "./profile/personal-information";
-import Orders from "./profile/orders";
-import Billing from "./profile/billing";
-import Cart from "./cart";
-import NotFound from "./not-found";
+import { useRoutes } from "react-router-dom";
 
-export {
-  Home,
-  Shop,
-  Contact,
-  SignIn,
-  Profile,
-  PersonalInformation,
-  Orders,
-  Billing,
-  Cart,
-  NotFound,
+import { protectedRoutes } from "./protected";
+import { publicRoutes } from "./public";
+import { useAuthUser } from "@stores/authentication";
+import { MainLayout } from "@components/Layout";
+import { Home, NotFound } from "@features/misc";
+import { Shop } from "@features/shop";
+
+export const AppRoutes = () => {
+  const user = useAuthUser((state) => state.user);
+
+  const routes = [
+    {
+      path: "/",
+      element: <MainLayout />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "/shop",
+          element: <Shop />,
+        },
+        ...(user ? protectedRoutes : publicRoutes),
+        {
+          path: "*",
+          element: <NotFound />,
+        },
+      ],
+    },
+  ];
+
+  const element = useRoutes(routes);
+
+  console.log(routes);
+
+  return <>{element}</>;
 };
